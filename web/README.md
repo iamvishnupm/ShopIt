@@ -15,7 +15,7 @@ To recreate this project with the same configuration:
 
 ```sh
 # recreate this project
-npx sv@0.12.4 create --template minimal --types ts --add prettier eslint vitest="usages:unit,component" --install npm web
+npx sv@0.12.4 create --template minimal --types ts --add prettier eslint vitest="usages:unit,component" tailwindcss="plugins:typography,forms" --install npm web
 ```
 
 ## Developing
