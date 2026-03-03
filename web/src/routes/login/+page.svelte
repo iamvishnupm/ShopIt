@@ -44,8 +44,8 @@
             if(!resp.ok){
                 error = data.detail || "Login Failed";
             } else {
-                localStorage.setItem("token", data.access_token);
-                goto("/");
+                localStorage.setItem("shopit_token", data.access_token);
+                await goto("/");
             }
         }
         catch(err){
