@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from typing import List
 
 from database import engine, Base, get_db
-from auth import hash_password, verify_password, create_access_token
+from auth import hash_password, verify_password, create_access_token, get_current_user
 from models import User
 from schemas import UserCreate, UserResponse, UserLogin
 
@@ -85,3 +85,15 @@ def login(user: UserLogin, db: Session = Depends(get_db)):
     )
 
     return {"access_token": access_token, "token_type": "bearer"}
+
+
+# ===========================================
+
+
+@api.get("/me")
+def read_me(current_user: User = Depends(get_current_user)):
+    return {
+        "id": current_user.id,
+        "email": current_user.email,
+        "username": current_user.username,
+    }

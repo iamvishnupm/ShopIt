@@ -1,4 +1,6 @@
 <script lang="ts">
+    import {goto} from "$app/navigation";
+
     let email = $state('');
     let username = $state('');
     let password = $state('');
@@ -42,9 +44,8 @@
             if(!resp.ok){
                 error = data.detail || "Login Failed";
             } else {
-                alert("Login Success");
-                console.log("Details : ");
-                console.log(data);
+                localStorage.setItem("token", data.access_token);
+                goto("/");
             }
         }
         catch(err){
