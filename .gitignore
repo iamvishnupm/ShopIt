@@ -1,0 +1,53 @@
+# =========================
+# GLOBAL
+# =========================
+.DS_Store
+.env
+.env.*
+*.log
+
+# =========================
+# PYTHON / FASTAPI (backend/)
+# =========================
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+
+backend/__pycache__/
+backend/*.db
+backend/*.sqlite3
+
+# Virtual environments
+venv/
+.venv/
+env/
+backend/venv/
+backend/.venv/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# =========================
+# NODE / SVELTEKIT (web/)
+# =========================
+web/node_modules/
+web/.svelte-kit/
+web/build/
+web/dist/
+
+# Vite
+web/.vite/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+Thumbs.db
