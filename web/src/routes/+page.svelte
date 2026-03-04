@@ -8,6 +8,7 @@
 
 	import Header from '$lib/components/header.svelte';
 	import AdCarousel from '$lib/components/ad_carousel.svelte';
+	import CategoriesSection from '$lib/components/categories_section.svelte';
 
 	// ========================================================
 
@@ -19,4 +20,5 @@
 <div class="min-h-screen bg-gray-50">
 	<Header />
 	<AdCarousel />
+	<CategoriesSection />
 </div>
