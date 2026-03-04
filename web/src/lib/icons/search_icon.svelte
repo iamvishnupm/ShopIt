@@ -1,6 +1,10 @@
+<script lang="ts">
+	let { addClass = '' } = $props();
+</script>
+
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	class="h-5 w-5"
+	class={`h-5 w-5 ${addClass}`}
 	fill="none"
 	viewBox="0 0 24 24"
 	stroke="currentColor"

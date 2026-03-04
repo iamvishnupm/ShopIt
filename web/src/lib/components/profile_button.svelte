@@ -1,9 +1,9 @@
 <script lang="ts">
-	let { height = 24, width = 24 } = $props();
+	let { height = 24, width = 24, addClass = '' } = $props();
 </script>
 
 <button
-	class="flex cursor-pointer items-center justify-center rounded-full border border-gray-300 p-2 hover:bg-gray-100"
+	class={`flex cursor-pointer items-center justify-center rounded-full border border-gray-300 p-2 hover:bg-gray-100 ${addClass}`}
 	aria-label="Profile"
 >
 	<svg

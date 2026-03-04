@@ -19,7 +19,7 @@
 <header
 	class="body-font container mx-auto flex flex-col p-10 text-gray-600 lg:flex-row lg:items-center lg:justify-between"
 >
-	<!-- logo, navigation -->
+	<!-- logo & navigations -->
 	<div class="mb-8 flex flex-col md:flex-row md:justify-between md:space-x-10 lg:mb-0">
 		<div class="flex items-center">
 			<div class="title-font flex cursor-pointer font-medium text-gray-900">
@@ -29,7 +29,7 @@
 
 			<div class="flex w-full items-center justify-end space-x-5 md:hidden">
 				<MenuButton {menuOpen} toggle={toggleMenu} />
-				<snap class="mt-0.5"><ProfileButton height={18} width={20} /></snap>
+				<ProfileButton height={18} width={20} addClass="mt-0.5" />
 			</div>
 		</div>
 
@@ -45,14 +45,14 @@
 			{/each}
 		</nav>
 
-		<div class="hidden self-end md:flex lg:hidden"><ProfileButton height={18} width={20} /></div>
+		<ProfileButton height={18} width={20} addClass="hidden self-end md:flex lg:hidden" />
 	</div>
 
 	<!-- search box -->
 	<div class="flex">
 		<div class="relative w-full lg:w-fit">
-			<div class="absolute top-3 left-4 text-gray-400"><SearchIcon /></div>
-			<div class="absolute top-3 right-4 cursor-pointer text-blue-500"><MicIcon /></div>
+			<SearchIcon addClass="absolute top-3 left-4 text-gray-400" />
+			<MicIcon addClass="absolute top-3 right-4 cursor-pointer text-blue-500" />
 			<input
 				class="w-full rounded-full border p-2.5 pl-10 hover:shadow-lg focus:shadow-lg focus:outline-0"
 				type="text"
@@ -60,6 +60,6 @@
 			/>
 		</div>
 
-		<div class="hidden lg:ml-5 lg:flex"><ProfileButton height={24} width={28} /></div>
+		<ProfileButton height={24} width={28} addClass="hidden lg:ml-5 lg:flex" />
 	</div>
 </header>

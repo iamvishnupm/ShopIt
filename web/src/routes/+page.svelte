@@ -7,6 +7,7 @@
 	// components
 
 	import Header from '$lib/components/header.svelte';
+	import AdCarousel from '$lib/components/ad_carousel.svelte';
 
 	// ========================================================
 
@@ -17,4 +18,5 @@
 
 <div class="min-h-screen bg-gray-50">
 	<Header />
+	<AdCarousel />
 </div>

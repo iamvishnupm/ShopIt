@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { menuOpen = false, toggle, h = 6, w = 6 } = $props();
+	let { menuOpen = false, toggle, addClass = 'h-6 w-6' } = $props();
 </script>
 
 <button class="cursor-pointer md:hidden" aria-label="hamburger" onclick={toggle}>
@@ -7,7 +7,7 @@
 		<!-- Close icon -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			class={`h-${h} w-${w}`}
+			class={`${addClass}`}
 			fill="none"
 			viewBox="0 0 24 24"
 			stroke="currentColor"
@@ -23,7 +23,7 @@
 		<!-- Hamburger icon -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			class={`h-${h} w-${w}`}
+			class={`${addClass}`}
 			fill="none"
 			viewBox="0 0 24 24"
 			stroke="currentColor"
